@@ -14,7 +14,7 @@ Utilizaremos o **GitFlow** como estratégia de branching. O GitFlow é um modelo
 - **release/**: Branches para preparação de novas versões
 - **hotfix/**: Branches para correções urgentes em produção
 
-![GitFlow](gitflow.png)
+![GitFlow](assets/gitflow.png)
 
 ## Padrão de Commits
 
