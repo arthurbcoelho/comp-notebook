@@ -26,6 +26,19 @@ Este é um projeto **super simples** de comparador de notebooks desenvolvido com
 - Boas práticas de desenvolvimento
 - Tipos de commit disponíveis
 
+## Como Revisar Mudanças
+
+🔍 **Revisão de Código**: Para manter a qualidade do projeto, todas as mudanças devem ser revisadas:
+
+
+### Checklist de Revisão
+
+- ✅ O código segue as convenções do projeto
+- ✅ O commit segue o padrão estabelecido
+- ✅ As funcionalidades foram testadas
+- ✅ Não há código comentado desnecessário
+- ✅ A documentação foi atualizada se necessário
+
 ## Tecnologias Utilizadas
 
 - HTML/CSS/JavaScript
