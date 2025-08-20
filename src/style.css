@@ -1,0 +1,354 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Container principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.comparison-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Cards dos notebooks */
+.notebook-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.notebook-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.notebook-card.gaming {
+    border: 2px solid #ff6b6b;
+    background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+}
+
+.notebook-card.gaming::before {
+    content: '🎮';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 3rem;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+/* Header do card */
+.notebook-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.notebook-header h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    flex: 1;
+    min-width: 200px;
+}
+
+.brand-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.brand-badge.dell {
+    background: linear-gradient(45deg, #007DB8, #0099CC);
+}
+
+.brand-badge.lenovo {
+    background: linear-gradient(45deg, #E4002B, #FF6B35);
+}
+
+/* Preços */
+.price {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-radius: 10px;
+}
+
+.current-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+    display: block;
+}
+
+.old-price {
+    font-size: 1rem;
+    color: #6c757d;
+    text-decoration: line-through;
+    margin-right: 0.5rem;
+}
+
+.discount {
+    background: #dc3545;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.estimate {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Especificações */
+.specs {
+    margin-bottom: 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.spec-item:hover {
+    background-color: #f8f9fa;
+}
+
+.spec-label {
+    font-weight: 600;
+    color: #495057;
+    min-width: 100px;
+    flex-shrink: 0;
+}
+
+.spec-value {
+    text-align: right;
+    color: #2c3e50;
+    flex: 1;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Features/Tags */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.feature {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.feature.basic {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
+}
+
+.feature.gaming {
+    background: linear-gradient(45deg, #ff6b6b, #ff5252);
+    color: white;
+}
+
+/* Resumo da comparação */
+.comparison-summary {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.comparison-summary h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    transition: transform 0.2s ease;
+}
+
+.summary-item:hover {
+    transform: scale(1.02);
+}
+
+.summary-item h4 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.summary-item p {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .comparison-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .notebook-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .brand-badge {
+        align-self: flex-end;
+        width: fit-content;
+    }
+    
+    .spec-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .spec-value {
+        text-align: left;
+        margin-left: 0;
+        margin-top: 0.2rem;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 0 0.5rem;
+    }
+    
+    .notebook-card {
+        padding: 1rem;
+    }
+    
+    .current-price {
+        font-size: 1.5rem;
+    }
+    
+    .features {
+        justify-content: center;
+    }
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.notebook-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.notebook-card:nth-child(1) { animation-delay: 0.1s; }
+.notebook-card:nth-child(2) { animation-delay: 0.2s; }
+.notebook-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Efeitos visuais */
+.notebook-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 15px 15px 0 0;
+}
+
+.notebook-card.gaming::before {
+    background: linear-gradient(90deg, #ff6b6b, #ff5252);
+}
